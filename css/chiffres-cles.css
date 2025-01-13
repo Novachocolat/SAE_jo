@@ -1,0 +1,533 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Alike", serif;
+    line-height: 1.6;
+}
+
+body {
+    background-color: #FBFAF8;
+}
+
+/* Retrait décoration originale des liens */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+b {
+    font-family: "Montserrat", sans-serif;
+}
+
+hr {
+    width: 200px;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+/* Design des liens dans le nav */
+nav a {
+    color: #C6B79B;
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 1.5em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Animation des liens dans nav */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -0.5px;
+    left: 0;
+    background-color: #C6B79B;
+    transition: width 0.3s; /* Animation trait */
+}
+
+/* 2- Animation des liens dans nav */
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Style pour le conteneur dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Masquer les menus déroulants par défaut */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 10px 20px #C6B79B;
+    margin-top: 1px; /*Espacement entre menu et sous-menu */
+    z-index: 1; /* Importance du bloc */
+}
+
+/* Style des liens dans le menu déroulant */
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #C6B79B;
+    white-space: nowrap;
+}
+
+/* Afficher le menu au survol */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Design du header */
+header {
+    background-color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Réglage taille image */
+.logo-icon img {
+    width: 300px;
+    height: 150px;
+}
+
+/* Bannière de la page (hero) */
+.hero {
+    background-image: url('../../img/chiffres-cles/chiffrecle_hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    padding: 200px 20px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0; 
+    padding-left: 20px; 
+}
+
+/* Texte section Hero */
+.hero h1 {
+    font-size: 3.5em;
+    margin: 0 0 0 60px;
+    color: white;
+    text-align: left;
+}
+
+/* Slogan section Hero */
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    margin: 0 0 20px 60px;
+    color: #C6B79B;
+}
+
+/* Petite bannière inférieure */
+.banniere {
+    width: 100%;
+}
+
+/* Les blocs d'informations avec image à droite */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    flex: 1;
+    text-align: justify;
+    padding: 40px;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.image-content {
+    flex: 1;
+    background-color: #e8f0f3;
+    
+}
+
+.text-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.text-content p {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.8;
+}
+
+.image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Les blocs d'informations avec image à gauche */
+.left-content-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Les Blocs d'interaction */
+.block-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.block-card {
+    background-color: white;
+    border-radius: 15px;
+    width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.block-card:hover {
+    /* Zoom au passage de la souris */
+    transform: scale(1.05);
+}
+
+.block-image {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+}
+
+.block-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.block-content h2 {
+    color: #C6B79B;
+    margin-bottom: 10px;
+}
+
+.block-content p {
+    font-family: "Montserrat", sans-serif;
+}
+
+.cta-button {
+    /* Bouton CTA */
+    display: inline-block;
+    background-color: #C6B79B;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Boutons 'En savoir plus' */
+.more-button {
+    display: inline-block;
+    background-color: #C6B79B;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 15px;
+}
+
+.more-button-content1 {
+    display: none;
+    text-align: justify;
+    margin: 5px 10px;
+}
+
+.more-button-content2 {
+    display: none;
+    text-align: justify;
+    margin: 5px 10px;
+}
+
+.more-button-content3 {
+    display: none;
+    text-align: justify;
+    margin: 5px 10px;
+}
+
+#toggle-content1:checked + label + .more-button-content1 {
+    display: block;
+}
+
+#toggle-content2:checked + label + .more-button-content2 {
+    display: block;
+}
+
+#toggle-content3:checked + label + .more-button-content3 {
+    display: block;
+}
+
+/* Frise chronologique */
+.history {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.history h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.history-wrapper {
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history .content-wrapper {
+    margin-bottom: 10px;
+}
+
+.timeline {
+    background-color: #d4cdc3;
+    padding: 40px 20px;
+    position: relative;
+    min-height: 200px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    right: 25px;
+    height: 2px;
+    background: white;
+}
+
+.timeline-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid white;
+}
+
+.timeline-points {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+}
+
+.point {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background: #666;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.point:hover {
+    transform: scale(1.2);
+    background-color: #444;
+}
+
+.point:nth-child(odd) {
+    transform: translateY(70px);
+}
+
+.point:nth-child(odd):hover {
+    transform: translateY(70px) scale(1.2);
+}
+
+.point:nth-child(even) {
+    transform: translateY(80px);
+}
+
+.point:nth-child(even):hover {
+    transform: translateY(70px) scale(1.2);
+}
+
+.history-text-content {
+    padding: 40px;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.history-text-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.history-text-content p {
+    font-family: "Montserra", sans-serif;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Design bas de page */
+footer {
+    background-color: #C6B79B;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Tablette */
+@media screen and (max-width: 1024px) {
+    /* Header et Navigation */
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo-icon img {
+        width: 200px;
+        height: auto;
+    }
+
+    nav a {
+        font-size: 1.2em;
+        margin: 0 15px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 150px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+        margin: 0 0 0 30px;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+        margin: 0 0 20px 30px;
+    }
+
+    /* Conteneurs de contenu */
+    .container {
+        padding: 15px;
+    }
+
+    .content-wrapper, .left-content-wrapper {
+        flex-direction: column;
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+    }
+
+    .text-content {
+        padding: 30px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    /* Header et Navigation */
+    header {
+        padding: 5px 10px;
+    }
+
+    .logo-icon img {
+        width: 150px;
+    }
+
+    nav {
+        text-align: right;
+    }
+
+    nav::before{
+        content: "MENU";
+        padding: 0 20px 0 20px;
+    }
+
+    nav a {
+        display: none;
+        border-top: 1px solid black;
+    }
+
+    nav:hover a{
+        display: block;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 100px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        margin: 0 0 0 20px;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+        margin: 0 0 15px 20px;
+    }
+
+    /* Conteneurs de contenu */
+    .container {
+        padding: 10px;
+    }
+
+    .text-content {
+        padding: 20px;
+    }
+
+    .text-content h2 {
+        font-size: 1.3em;
+    }
+
+    .text-content p {
+        font-size: 0.9em;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
