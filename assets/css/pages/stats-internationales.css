@@ -1,0 +1,183 @@
+body {
+    background-color: #FBFAF8;
+}
+
+/* Bannière de la page (hero) */
+.hero {
+    background-image: url('../../img/stats-internationales/stat-inter-hero.jpg');
+}
+
+/* Petite bannière inférieure */
+.banniere {
+    width: 100%;
+}
+
+/* Fiches de contact */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.profiles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    width: 300px;
+    background-color: #4a4a4a;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto 20px;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.profile-description {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Les blocs d'informations avec image à droite */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+/* Les Blocs d'interaction */
+.block-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.block-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.cta-button {
+    /* Bouton CTA */
+    display: inline-block;
+    background-color: #C6B79B;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Tablette */
+@media screen and (max-width: 1024px) {
+    .content-wrapper, .left-content-wrapper {
+        flex-direction: column;
+    }
+
+    /* Header et Navigation */
+    header {
+        padding: 10px 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 150px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+        margin: 0 0 0 30px;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+        margin: 0 0 20px 30px;
+    }
+
+    /* Conteneurs de contenu */
+    .container {
+        padding: 15px;
+    }
+
+    .text-content {
+        padding: 30px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    /* Header et Navigation */
+    header {
+        padding: 5px 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        margin: 0 0 0 20px;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+        margin: 0 0 15px 20px;
+    }
+
+    /* Conteneurs de contenu */
+    .container {
+        padding: 10px;
+    }
+
+    .text-content {
+        padding: 20px;
+    }
+
+    .text-content h2 {
+        font-size: 1.3em;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+        text-align: center;
+    }
+}

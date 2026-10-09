@@ -1,10 +1,3 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Alike", serif;
-    line-height: 1.6;
-}
-
 body {
     background-color: #FBFAF8;
 }
@@ -15,54 +8,6 @@ a {
     color: #FFFFFF;
 }
 
-b {
-    font-family: "Montserrat", sans-serif;
-}
-
-hr {
-    width: 200px;
-    margin: 20px auto;
-}
-
-h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-/* Design des liens dans le nav */
-nav a {
-    color: #C6B79B;
-    text-decoration: none;
-    margin: 0 30px;
-    font-size: 1.5em;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-/* Animation des liens dans nav */
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -0.5px;
-    left: 0;
-    background-color: #C6B79B;
-    transition: width 0.3s; /* Animation trait */
-}
-
-/* 2- Animation des liens dans nav */
-nav a:hover::after {
-    width: 100%;
-}
-
-/* Style pour le conteneur dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
 /* Masquer les menus déroulants par défaut */
 .dropdown-menu {
     display: none;
@@ -71,19 +16,6 @@ nav a:hover::after {
     box-shadow: 0px 10px 20px #C6B79B;
     margin-top: 1px; /*Espacement entre menu et sous-menu */
     z-index: 1; /* Importance du bloc */
-}
-
-/* Style des liens dans le menu déroulant */
-.dropdown-menu a {
-    display: block;
-    padding: 10px 15px;
-    color: #C6B79B;
-    white-space: nowrap;
-}
-
-/* Afficher le menu au survol */
-.dropdown:hover .dropdown-menu {
-    display: block;
 }
 
 /* Design du header */
@@ -98,26 +30,9 @@ header {
     z-index: 100;
 }
 
-/* Réglage taille image */
-.logo-icon img {
-    width: 300px;
-    height: 150px;
-}
-
 /* Bannière de la page (hero) */
 .hero {
     background-image: url('../../img/index/hero.jpeg');
-    background-size: cover;
-    background-position: center;
-    text-align: left;
-    padding: 200px 20px;
-    position: relative;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0; 
-    padding-left: 20px; 
 }
 
 /* Titre section Hero */
@@ -181,13 +96,6 @@ header {
     padding: 20px;
 }
 
-.content-wrapper {
-    display: flex;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .text-content {
     flex: 1;
     text-align: justify;
@@ -208,29 +116,6 @@ header {
     color: #FFFFFF;
 }
 
-/* Paragraphe du bloc */
-.text-content p {
-    font-family: "Montserrat", sans-serif;
-    line-height: 1.8;
-}
-
-/* Image du bloc */
-.image-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Les blocs d'informations avec image à gauche */
-.left-content-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-    background: #f5f5f5;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Les blocs d'interaction */
 .block-container {
     display: flex;
@@ -247,31 +132,6 @@ header {
     transition: transform 0.3s ease;
 }
 
-.block-card:hover {
-    /* Zoom au passage de la souris */
-    transform: scale(1.05);
-}
-
-.block-image {
-    width: 100%;
-    height: 125px;
-    object-fit: cover;
-}
-
-.block-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.block-content h2 {
-    color: #C6B79B;
-    margin-bottom: 10px;
-}
-
-.block-content p {
-    font-family: "Montserrat", sans-serif;
-}
-
 /* Boutons 'En savoir plus' */
 .more-button {
     display: inline-block;
@@ -281,36 +141,6 @@ header {
     text-decoration: none;
     border-radius: 50px;
     margin-top: 15px;
-}
-
-.more-button-content1 {
-    display: none;
-    text-align: justify;
-    margin: 5px 10px;
-}
-
-.more-button-content2 {
-    display: none;
-    text-align: justify;
-    margin: 5px 10px;
-}
-
-.more-button-content3 {
-    display: none;
-    text-align: justify;
-    margin: 5px 10px;
-}
-
-#toggle-content1:checked + label + .more-button-content1 {
-    display: block;
-}
-
-#toggle-content2:checked + label + .more-button-content2 {
-    display: block;
-}
-
-#toggle-content3:checked + label + .more-button-content3 {
-    display: block;
 }
 
 /* Frise chronologique */
@@ -433,19 +263,13 @@ footer {
 
 /* Tablette */
 @media screen and (max-width: 1024px) {
+    .content-wrapper, .left-content-wrapper {
+        flex-direction: column;
+    }
+
     /* Header et Navigation */
     header {
         padding: 10px 20px;
-    }
-
-    .logo-icon img {
-        width: 200px;
-        height: auto;
-    }
-
-    nav a {
-        font-size: 1.2em;
-        margin: 0 15px;
     }
 
     /* Hero Section */
@@ -466,14 +290,6 @@ footer {
     /* Conteneurs de contenu */
     .container {
         padding: 15px;
-    }
-
-    .content-wrapper, .left-content-wrapper {
-        flex-direction: column;
-    }
-
-    .text-content, .image-content {
-        width: 100%;
     }
 
     .text-content {
@@ -508,28 +324,6 @@ footer {
         padding: 5px 10px;
     }
 
-    .logo-icon img {
-        width: 150px;
-    }
-
-    nav {
-        text-align: right;
-    }
-
-    nav::before{
-        content: "MENU";
-        padding: 0 20px 0 20px;
-    }
-
-    nav a {
-        display: none;
-        border-top: 1px solid black;
-    }
-
-    nav:hover a{
-        display: block;
-    }
-    
     /* Hero Section */
     .hero {
         padding: 100px 10px;
@@ -556,10 +350,6 @@ footer {
 
     .text-content h2 {
         font-size: 1.3em;
-    }
-
-    .text-content p {
-        font-size: 0.9em;
     }
 
     /* Blocs d'armes */
@@ -597,13 +387,11 @@ footer {
         margin: 5px 0;
     }
 
-    .point:nth-child(odd),
-    .point:nth-child(even) {
+    .point:nth-child(odd), .point:nth-child(even) {
         transform: none;
     }
 
-    .point:nth-child(odd):hover,
-    .point:nth-child(even):hover {
+    .point:nth-child(odd):hover, .point:nth-child(even):hover {
         transform: scale(1.2);
     }
 
@@ -636,9 +424,5 @@ footer {
     footer {
         padding: 15px;
         text-align: center;
-    }
-
-    footer p {
-        font-size: 0.9em;
     }
 }

@@ -1,0 +1,189 @@
+body {
+    background-color: #FBFAF8;
+}
+
+/* Bannière de la page (hero) */
+.hero {
+    background-image: url('../../img/paris/hero-paris.jpg');
+}
+
+/* Petite bannière inférieure */
+.banniere {
+    width: 100%;
+}
+
+/* Les blocs d'informations avec image à droite */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-wrapper-column {
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    flex: 1;
+    text-align: justify;
+    padding: 40px;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+/* Les Blocs d'interaction */
+.block-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 40px 0 40px;
+    background-color: #f9f9f9;
+}
+
+.block-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.cta-button {
+    /* Bouton CTA */
+    display: inline-block;
+    background-color: #C6B79B;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Boutons 'En savoir plus' */
+.more-button {
+    display: inline-block;
+    background-color: #C6B79B;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 15px;
+}
+
+.more-button-content4 {
+    display: none;
+    text-align: justify;
+    margin: 5px 10px;
+}
+
+#toggle-content4:checked + label + .more-button-content4 {
+    display: block;
+}
+
+/* Tablette */
+@media screen and (max-width: 1024px) {
+    .content-wrapper, .left-content-wrapper {
+        flex-direction: column;
+    }
+
+    /* Header et Navigation */
+    header {
+        padding: 10px 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 150px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+        margin: 0 0 0 30px;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+        margin: 0 0 20px 30px;
+    }
+
+    /* Conteneurs de contenu */
+    .container {
+        padding: 15px;
+    }
+
+    .text-content {
+        padding: 30px;
+    }
+
+    /* Blocs d'armes */
+    .block-container {
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .block-card {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    /* Header et Navigation */
+    header {
+        padding: 5px 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        margin: 0 0 0 20px;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+        margin: 0 0 15px 20px;
+    }
+
+    /* Conteneurs de contenu */
+    .container {
+        padding: 10px;
+    }
+
+    .text-content {
+        padding: 20px;
+    }
+
+    .text-content h2 {
+        font-size: 1.3em;
+    }
+
+    /* Blocs d'armes */
+    .block-container {
+        padding: 0 10px;
+    }
+
+    .block-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .block-image {
+        height: 100px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+        text-align: center;
+    }
+}

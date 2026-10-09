@@ -1,12 +1,8 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: "Alike", serif;
     line-height: 1.6;
-}
-
-body {
-    background-color: #FBFAF8;
 }
 
 /* Retrait décoration originale des liens */
@@ -104,9 +100,7 @@ header {
     height: 150px;
 }
 
-/* Bannière de la page (hero) */
 .hero {
-    background-image: url('../../img/index/hero.jpeg');
     background-size: cover;
     background-position: center;
     text-align: left;
@@ -116,8 +110,8 @@ header {
 
 .hero-content {
     max-width: 800px;
-    margin: 0; 
-    padding-left: 20px; 
+    margin: 0;
+    padding-left: 20px;
 }
 
 /* Texte section Hero */
@@ -136,37 +130,16 @@ header {
     color: #C6B79B;
 }
 
-/* Petite bannière inférieure */
-.banniere {
-    width: 100%;
-}
-/* Les blocs d'informations avec image à droite */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .content-wrapper {
     display: flex;
-    flex-direction: column-reverse;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.text-content {
-    flex: 1;
-    text-align: justify;
-    padding: 40px;
-    background-color: #4a4a4a;
-    color: white;
-}
-
 .image-content {
     flex: 1;
     background-color: #e8f0f3;
-    
 }
 
 .text-content h2 {
@@ -175,11 +148,13 @@ header {
     color: white;
 }
 
+/* Paragraphe du bloc */
 .text-content p {
     font-family: "Montserrat", sans-serif;
     line-height: 1.8;
 }
 
+/* Image du bloc */
 .image-content img {
     width: 100%;
     height: 100%;
@@ -195,23 +170,68 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.cta-button {
-    /* Bouton CTA */
-    display: inline-block;
-    background-color: #C6B79B;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 50px;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
+
+.block-card {
+    background-color: white;
+    border-radius: 15px;
+    width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-/* Petite bannière inférieure */
-.sources {
-    margin: auto;
-    align-items: center;
-    display: flex;
+.block-card:hover {
+    /* Zoom au passage de la souris */
+    transform: scale(1.05);
+}
+
+.block-image {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+}
+
+.block-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.block-content h2 {
+    color: #C6B79B;
+    margin-bottom: 10px;
+}
+
+.block-content p {
+    font-family: "Montserrat", sans-serif;
+}
+
+.more-button-content1 {
+    display: none;
+    text-align: justify;
+    margin: 5px 10px;
+}
+
+.more-button-content2 {
+    display: none;
+    text-align: justify;
+    margin: 5px 10px;
+}
+
+.more-button-content3 {
+    display: none;
+    text-align: justify;
+    margin: 5px 10px;
+}
+
+#toggle-content1:checked + label + .more-button-content1 {
+    display: block;
+}
+
+#toggle-content2:checked + label + .more-button-content2 {
+    display: block;
+}
+
+#toggle-content3:checked + label + .more-button-content3 {
+    display: block;
 }
 
 /* Design bas de page */
@@ -222,13 +242,7 @@ footer {
     padding: 20px;
 }
 
-/* Tablette */
 @media screen and (max-width: 1024px) {
-    /* Header et Navigation */
-    header {
-        padding: 10px 20px;
-    }
-
     .logo-icon img {
         width: 200px;
         height: auto;
@@ -239,46 +253,12 @@ footer {
         margin: 0 15px;
     }
 
-    /* Hero Section */
-    .hero {
-        padding: 150px 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.8em;
-        margin: 0 0 0 30px;
-    }
-
-    .hero p {
-        font-size: 1.3em;
-        margin: 0 0 20px 30px;
-    }
-
-    /* Conteneurs de contenu */
-    .container {
-        padding: 15px;
-    }
-
-    .content-wrapper, .left-content-wrapper {
-        flex-direction: column;
-    }
-
     .text-content, .image-content {
         width: 100%;
     }
-
-    .text-content {
-        padding: 30px;
-    }
 }
 
-/* Mobile */
 @media screen and (max-width: 767px) {
-    /* Header et Navigation */
-    header {
-        padding: 5px 10px;
-    }
-
     .logo-icon img {
         width: 150px;
     }
@@ -287,7 +267,7 @@ footer {
         text-align: right;
     }
 
-    nav::before{
+    nav::before {
         content: "MENU";
         padding: 0 20px 0 20px;
     }
@@ -297,46 +277,12 @@ footer {
         border-top: 1px solid black;
     }
 
-    nav:hover a{
+    nav:hover a {
         display: block;
-    }
-    
-    /* Hero Section */
-    .hero {
-        padding: 100px 10px;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-        margin: 0 0 0 20px;
-    }
-
-    .hero p {
-        font-size: 1.1em;
-        margin: 0 0 15px 20px;
-    }
-
-    /* Conteneurs de contenu */
-    .container {
-        padding: 10px;
-    }
-
-    .text-content {
-        padding: 20px;
-    }
-
-    .text-content h2 {
-        font-size: 1.3em;
     }
 
     .text-content p {
         font-size: 0.9em;
-    }
-
-    /* Footer */
-    footer {
-        padding: 15px;
-        text-align: center;
     }
 
     footer p {

@@ -1,0 +1,164 @@
+body {
+    background-color: #FBFAF8;
+}
+
+/* Bannière de la page (hero) */
+.hero {
+    background-image: url('../../img/olympiques/escrime-hero-jo.jpg');
+}
+
+/* Petite bannière inférieure */
+.banniere {
+    width: 100%;
+}
+
+/* Classement */
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.podium-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.name {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+    letter-spacing: 2px;
+}
+
+.flag {
+    color: white;
+    font-size: 25px;
+}
+
+.gold {
+    background-color: #C6B79B;
+}
+
+.silver {
+    background-color: #D9D9D9;
+}
+
+.bronze {
+    background-color: #AD795B;
+}
+
+.france {
+    background-color: black;
+}
+
+.cta-button {
+    /* Bouton CTA */
+    display: inline-block;
+    background-color: #C6B79B;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Tablette */
+@media screen and (max-width: 1024px) {
+    .content-wrapper, .left-content-wrapper {
+        flex-direction: column;
+    }
+
+    /* Header et Navigation */
+    header {
+        padding: 10px 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 150px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+        margin: 0 0 0 30px;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+        margin: 0 0 20px 30px;
+    }
+
+    /* Conteneurs de contenu */
+    .container {
+        padding: 15px;
+    }
+
+    .text-content {
+        padding: 30px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    /* Header et Navigation */
+    header {
+        padding: 5px 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        margin: 0 0 0 20px;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+        margin: 0 0 15px 20px;
+    }
+
+    /* Conteneurs de contenu */
+    .container {
+        padding: 10px;
+    }
+
+    .text-content {
+        padding: 20px;
+    }
+
+    .text-content h2 {
+        font-size: 1.3em;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+        text-align: center;
+    }
+}
